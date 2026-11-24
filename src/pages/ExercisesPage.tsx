@@ -3,7 +3,7 @@ import { Plus } from 'lucide-react';
 import type { Exercise, ExerciseFilters } from '../types/exercise';
 import { getExercises, deleteExercise, addExercise, updateExercise, generateId, generateCode } from '../lib/storage';
 import ExerciseCard from '../components/ExerciseCard';
-import ExerciseFilters from '../components/ExerciseFilters';
+import ExerciseFilterPanel from '../components/ExerciseFilters';
 import ExerciseForm from '../components/ExerciseForm';
 
 const emptyFilters: ExerciseFilters = {
@@ -129,7 +129,7 @@ export default function ExercisesPage() {
       </div>
 
       {/* Filters */}
-      <ExerciseFilters
+      <ExerciseFilterPanel
         filters={filters}
         onChange={setFilters}
         totalCount={exercises.length}
